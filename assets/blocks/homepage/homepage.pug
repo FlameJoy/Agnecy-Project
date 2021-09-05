@@ -1,0 +1,15 @@
+section.homepage 
+  .container 
+    .homepage-container
+      nav.menu
+        ul.menu__list 
+          each name in ['home', 'portfolio', 'about us', 'contact']
+            li.menu__item
+              a(href=`${name}.html`)=name
+      .homepage-wrap 
+        .homepage-info 
+          h1.homepage-info__title 
+          p.homepage-info__text 
+          button(type="submit") Contact Us
+        .homepage-video
+          video(src="../assets/video/ALPS & DOLOMITES (Drone + Timelapse) Heavenly Nature Relaxation™ 5 Minute Short Film in 4K UHD.mp4") 
