@@ -1,0 +1,17 @@
+section.homepage 
+  .container 
+    .homepage-container
+      nav.menu
+        ul.menu__list 
+          each name in ['home', 'portfolio', 'about us', 'contact']
+            li.menu__item
+              a.menu__link(href=`${name}.html`)=name
+      .homepage-wrap 
+        .homepage-info 
+          h1.homepage-info__title our strong organaisation
+          p.homepage-info__text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ratione libero quis enim doloremque. Doloremque repellat eveniet numquam sequi autem, provident porro possimus error reiciendis optio!
+          button.btn.homepage-btn(type="submit") Contact Us
+        .homepage-video-container
+          video#homepage-video.homepage-video(width="550" height="355" poster="../assets/images/dest/video-preview.jpg")
+            source(src="../assets/video/ALPS & DOLOMITES (Drone + Timelapse) Heavenly Nature Relaxation™ 5 Minute Short Film in 4K UHD.mp4" type="video/mp4")
+          #play.homepage-video__play-btn

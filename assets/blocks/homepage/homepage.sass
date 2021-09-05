@@ -1,0 +1,125 @@
+.menu
+  background-color: #313030
+  width: 100%
+  margin-top: 2%
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: center
+  &__item
+    font-family: "OpenSans", sans-serif
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: .15em
+    text-transform: uppercase
+    padding: 40px 25px 30px 25px
+    &:hover
+      background-color: #ff3f40
+    &:active
+      background-color: #ff3f40
+  &__link
+      color: #e0e0e0
+
+.homepage-wrap 
+  display: flex
+  flex-direction: row
+  margin-top: 60px
+
+.homepage-info
+  &__title
+    font-family: "OpenSans", sans-serif
+    font-size: 60px
+    font-weight: 800
+    text-transform: uppercase
+    padding: 15px 0
+    padding-right: 25px
+    line-height: 1.2em
+  &__text
+    font-family: "OpenSans", sans-serif
+    font-size: 16px
+    color: #6f6d6d
+    line-height: 1.8em
+    width: 80%
+
+.homepage-video-container
+  position: relative
+  height: 335px
+  width: 550px
+
+.homepage-video
+  box-shadow: 0 0 45px #000
+  object-fit: cover
+  &__play-btn
+    background: url(../images/dest/play-btn.png)
+    height: 70px
+    width: 70px
+    position: absolute
+    left: calc( 50% - 35px )
+    top: calc( 50% - 35px )
+    cursor: pointer
+    transform: scale(.8)
+    transition: all .2s ease
+    visibility: visible
+    &:hover
+      transform: scale(1)
+
+.homepage-btn
+  margin-top: 40px
+
+@media (max-width: 1440px)
+  .homepage-info
+    &__title
+      font-size: 18px
+    
+@media (max-width: 1000px)
+  .homepage-wrap 
+    flex-direction: column-reverse
+    margin: 0
+
+  .homepage-info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__title
+      font-size: 18px
+      margin-top: 20px
+      text-align: center
+      padding: 0
+    &__text
+      font-size: 14px
+      text-align: center
+      width: 100%
+      margin-top: 10px
+
+  .homepage-video-container
+    position: relative
+    height: auto
+    width: 100%
+
+  .homepage-video
+    box-shadow: 0 0 15px #000
+    height: inherit
+    width: inherit
+  
+  .homepage-btn
+    margin-top: 20px
+
+@media (max-width: 768px)
+  .menu
+    &__item
+      font-size: 11px
+      padding: 30px 15px 20px 20px
+
+@media (max-width: 576px)
+  .menu
+    &__item
+      font-size: 8px
+      padding: 20px 10px 15px 10px
+  .homepage-info
+    &__title
+      font-size: 14px
+
+@media (max-width: 330px)
+  .menu
+    &__item
+      font-size: 7px
