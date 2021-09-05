@@ -1,0 +1,70 @@
+a 
+  text-decoration: none
+
+.container
+  max-width: 80%
+  width: 80%
+  margin: 0 auto
+
+.btn
+  font-family: "OpenSans", sans-serif
+  font-size: 18px
+  font-weight: 500
+  color: #fff
+  background-color: #ff2d2d
+  padding: 12px 50px
+  border: none
+  border-radius: 3px
+
+.menu
+  background-color: #313030
+  width: 100%
+  margin-top: 2%
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: center
+  &__item
+    font-family: "OpenSans", sans-serif
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: .15em
+    text-transform: uppercase
+    padding: 40px 25px 30px 25px
+    &:hover
+      background-color: #ff3f40
+  &__link
+      color: #e0e0e0
+
+.homepage-wrap 
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  margin-top: 60px
+
+.homepage-info
+  grid-column: span 6
+  &__title
+    font-family: "OpenSans", sans-serif
+    font-size: 60px
+    font-weight: 800
+    text-transform: uppercase
+    padding: 15px 0
+    line-height: 1.2em
+  &__text
+    font-family: "OpenSans", sans-serif
+    font-size: 16px
+    color: #6f6d6d
+    line-height: 1.8em
+    width: 80%
+
+.homepage-video-container
+  grid-column: span 6
+
+.homepage-video
+  float: right
+  box-shadow: 0 0 5px #000
+  object-fit: cover
+
+.homepage-btn
+  margin-top: 40px
+
