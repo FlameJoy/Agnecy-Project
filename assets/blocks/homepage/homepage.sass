@@ -15,6 +15,7 @@ a
   padding: 12px 50px
   border: none
   border-radius: 3px
+  cursor: pointer
 
 .menu
   background-color: #313030
@@ -37,12 +38,11 @@ a
       color: #e0e0e0
 
 .homepage-wrap 
-  display: grid
-  grid-template-columns: repeat(12, 1fr)
+  display: flex
+  flex-direction: row
   margin-top: 60px
 
 .homepage-info
-  grid-column: span 6
   &__title
     font-family: "OpenSans", sans-serif
     font-size: 60px
@@ -58,12 +58,24 @@ a
     width: 80%
 
 .homepage-video-container
-  grid-column: span 6
+  position: relative
 
 .homepage-video
-  float: right
-  box-shadow: 0 0 5px #000
+  box-shadow: 0 0 45px #000
   object-fit: cover
+  &__play-btn
+    background: url(../images/dest/play-btn.png)
+    height: 70px
+    width: 70px
+    position: absolute
+    left: calc( 50% - 35px )
+    top: calc( 50% - 35px )
+    cursor: pointer
+    transform: scale(.8)
+    transition: all .2s ease
+    visibility: visible
+    &:hover
+      transform: scale(1)
 
 .homepage-btn
   margin-top: 40px
