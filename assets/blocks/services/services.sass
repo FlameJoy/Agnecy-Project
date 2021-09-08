@@ -48,4 +48,60 @@
 .service__text
   padding-top: 20px
   line-height: 1.5em
+  color: #585858
 
+// Adaptivity
+
+@media (max-width: 1000px)
+  .services
+    margin-top: 80px
+  .services-container 
+    flex-direction: column
+    justify-content: center
+
+  .services-info,
+  .services-list 
+    width: 100%
+    column-gap: 0
+
+  .services-info
+    display: grid
+    &__title
+      font-size: 20px
+    &__title, 
+    &__text
+      text-align: center
+      padding: 0
+
+  .service-btn
+    display: grid
+    justify-items: center
+    margin-bottom: 50px
+
+  .service__text
+    width: 80%
+  
+@media (max-width: 500px)
+  .services-list 
+    display: grid
+    grid-template-columns: 1fr
+  
+  .service-box
+    padding: 0 20px
+
+  .service
+    &__title
+      display: inline-block
+      padding-left: 20px
+    &__text
+      width: 100%
+
+@media (max-width: 330px)
+  .services-info
+    &__title
+      font-size: 18px
+  .service-box
+    .fas
+      font-size: 22px
+    .service__title
+      font-size: 18px
