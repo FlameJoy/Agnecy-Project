@@ -1,0 +1,13 @@
+section.products
+  .container 
+    .products-container 
+      .products-wrap 
+        .products__title feature products
+        .products__text Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.
+      .products-portfolio
+        ul.products__list
+          each name in ['all', 'print template', 'web template', 'user interface', 'mock-up']
+            li.products__item 
+              a.products__link(href="#")=name
+        .products-template 
+          .template
