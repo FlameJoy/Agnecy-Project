@@ -10,14 +10,7 @@
       width: 20%
       margin-top: 30px
   &__title
-    // @extend %h2-title
-    font-family: OpenSans,sans-serif
-    font-size: 42px
-    font-weight: 600
-    text-transform: uppercase
-    color: #585858
-    line-height: 1.3em
-
+    @extend %h2-title
     text-align: center
   &__text
     font-family: OpenSans,sans-serif
@@ -52,4 +45,31 @@
 .products-portfolio
   margin-top: 60px
 
-      
+// Adaptivity
+
+@media (max-width: 1440px)
+  .products
+    &__title
+      font-size: 24px
+  .products-portfolio
+    .products
+      &__item,
+      &__link
+        font-size: 16px
+@media (max-width: 1000px)
+  
+@media (max-width: 768px)
+  .products
+    margin-top: 80px
+    &__text
+      width: 100%
+  .products-portfolio
+    .products
+      &__item,
+      &__link
+        font-size: 14px
+@media (max-width: 330px)
+  .products
+    &__list
+      flex-wrap: wrap
+      justify-content: space-between
