@@ -1,0 +1,75 @@
+.products
+  margin-top: 160px
+  &-wrap
+    display: grid
+    justify-items: center
+    &::after
+      display: block
+      content: ""
+      border: 1px solid #ff2d2d
+      width: 20%
+      margin-top: 30px
+  &__title
+    @extend %h2-title
+    text-align: center
+  &__text
+    font-family: OpenSans,sans-serif
+    font-size: 16px
+    color: #585858
+    margin-top: 20px
+    line-height: 1.5em
+    text-align: center
+    width: 50%
+
+.products-portfolio
+  .products
+    &__list
+      display: flex
+      flex-direction: row
+      justify-content: space-evenly
+    &__item,
+    &__link
+      font-family: "Times New Romance",sans-serif
+      font-size: 24px
+      font-weight: 600
+      color: #737373
+      padding: 5px 15px
+      border-radius: 4px
+      text-transform: uppercase
+    &__item:hover
+      background-color: #737373
+      color: #fff
+      .products__link
+        color: #fff
+
+.products-portfolio
+  margin-top: 60px
+
+// Adaptivity
+
+@media (max-width: 1440px)
+  .products
+    &__title
+      font-size: 24px
+  .products-portfolio
+    .products
+      &__item,
+      &__link
+        font-size: 16px
+@media (max-width: 1000px)
+  
+@media (max-width: 768px)
+  .products
+    margin-top: 80px
+    &__text
+      width: 100%
+  .products-portfolio
+    .products
+      &__item,
+      &__link
+        font-size: 14px
+@media (max-width: 330px)
+  .products
+    &__list
+      flex-wrap: wrap
+      justify-content: space-between
