@@ -6,8 +6,22 @@ section.products
         .products__text Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.
       .products-portfolio
         ul.products__list
-          each name in ['all', 'print template', 'web template', 'user interface', 'mock-up']
-            li.products__item 
-              a.products__link(href="#")=name
+          li.products__item 
+            a.products__link(onclick="choose('all')") all
+          li.products__item 
+            a.products__link(onclick="choose('print template')") print template
+          li.products__item 
+            a.products__link(onclick="choose('web template')") web template
+          li.products__item 
+            a.products__link(onclick="choose('user interface')") user interface
+          li.products__item 
+            a.products__link(onclick="choose('mock-up')") mock-up
         .products-template 
-          .template
+          .template.print-template
+          .template.web-template
+          .template.print-template
+          .template.user-interface
+          .template.web-template
+          .template.mock-up
+          .template.user-interface
+          .template.user-interface

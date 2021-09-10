@@ -27,6 +27,7 @@
       display: flex
       flex-direction: row
       justify-content: space-evenly
+      user-select: none
     &__item,
     &__link
       font-family: "Times New Romance",sans-serif
@@ -34,17 +35,65 @@
       font-weight: 600
       color: #737373
       padding: 5px 15px
-      border-radius: 4px
+      border-radius: 3px
       text-transform: uppercase
+      cursor: pointer
     &__item:hover
-      background-color: #737373
-      color: #fff
       .products__link
-        color: #fff
+        color: #0f84e4
 
 .products-portfolio
   margin-top: 60px
 
+.products-template
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 20px
+  justify-content: center
+  margin-top: 30px
+  .template
+    display: block
+    width: 300px
+    height: 200px
+    border-radius: 4px
+    transition: all .2s ease
+    animation: show 1s
+    &:hover
+      transform: scale(1.2)
+
+  .template:nth-child(1)
+    background: url(../images/dest/bike.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 100%
+  .template:nth-child(2)
+    background: url(../images/dest/coffe.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 100%
+  .template:nth-child(3)
+    background: url(../images/dest/headphones.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 100%
+  .template:nth-child(4)
+    background: url(../images/dest/cake.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 100%
+  .template:nth-child(5)
+    background: url(../images/dest/medic.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 120%
+  .template:nth-child(6)
+    background: url(../images/dest/wine.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 120%
+  .template:nth-child(7)
+    background: url(../images/dest/sneakers.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 100%
+  .template:nth-child(8)
+    background: url(../images/dest/camera.jpg) no-repeat
+    background-position: 50% 50%
+    background-size: 120%
 // Adaptivity
 
 @media (max-width: 1440px)
