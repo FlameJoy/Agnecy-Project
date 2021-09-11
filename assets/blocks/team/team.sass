@@ -1,0 +1,194 @@
+.team
+  margin-top: 100px
+  &__title
+    @extend %h2-title
+  &__text
+    @extend %text
+    text-align: left
+    line-height: 1.4em
+    padding-left: 15px
+  &-wrap
+    width: 40%
+    &::after
+      @extend %red-underline
+      width: 18%
+      margin-left: 15px
+
+.team-list
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-template-rows: repeat(2, 1fr)
+  margin-top: 50px
+
+.team-leader-photo
+  width: 350px
+  height: 420px
+  background: url(../images/dest/mark-waugh.jpg) no-repeat
+  background-position: 50% 20%
+  background-size: 100%
+  grid-column: 1 / 5
+  grid-row: span 2
+
+.team-leader-info
+  grid-column: 5 / 12
+  grid-row: span 1
+
+.team-workers
+  grid-column: 5 / 12
+  grid-row: span 1
+
+.team-leader
+  &__title
+    font-family: "OpenSans", sans-serif
+    font-size: 30px
+    font-weight: 500
+    color: $color-grey
+    text-transform: uppercase
+    margin: 20px 0
+  &__text
+    @extend %text
+    text-align: left
+    line-height: 1.4em
+
+.team-leader-links
+  margin-top: 35px
+  .team-leader
+    &__link
+      color: $color-grey
+      font-weight: 600
+      font-style: italic
+      padding-right: 40px
+
+.team-workers
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-end
+  column-gap: 15px
+  .team-worker
+    &__box
+      height: 200px
+      width: 200px
+      position: relative
+      &:hover
+        .team-worker__text_overlay
+          opacity: 1
+    &__pic
+      width: inherit
+      height: inherit
+    &__text
+      font-family: "OpenSans", sans-serif
+      font-size: 18px
+      font-weight: 500
+      text-align: center
+      text-transform: uppercase
+      color: #fff
+      transition: all .2s ease
+      padding: 10px 0
+    &__text_overlay
+      position: absolute
+      content: ''
+      background-color: rgba(0, 0, 0, .5)
+      width: inherit
+      bottom: 0
+      opacity: 0
+
+.team-worker__box
+  &:nth-child(1) .team-worker__pic
+    background: url(../images/dest/chicken.jpg) no-repeat center
+    background-size: 100%
+    background-position-y: 20%
+  &:nth-child(2) .team-worker__pic
+    background: url(../images/dest/cat.jpg) no-repeat center
+    background-size: 150%
+    object-fit: cover
+  &:nth-child(3) .team-worker__pic
+    background: url(../images/dest/dog.jpg) no-repeat center
+    background-size: 160%
+  &:nth-child(4) .team-worker__pic
+    background: url(../images/dest/mouse.jpg) no-repeat center
+    background-size: 150%
+
+// Adaptivity
+
+@media (max-width: 1440px)
+  .team-leader-photo
+    width: 300px
+    height: 370px
+  
+  .team-workers
+    .team-worker__box,
+    .team-worker__pic
+        height: 150px
+        width: 150px
+
+@media (max-width: 1250px)
+  .team-wrap .team__title
+    font-size: 24px
+
+  .team-leader-photo
+    width: 250px
+    height: 320px
+  
+  .team-leader-info
+    grid-column: 5 / 12
+    grid-row: span 2
+
+  .team-workers
+    grid-column: 1 / 12
+    grid-row: span 1
+    margin-top: 20px
+    justify-content: space-evenly
+
+  .team-worker__pic
+    .team-worker__text_overlay
+      opacity: 1
+
+@media (max-width: 800px)
+  .team-wrap
+    width: 100%
+    &::after
+      width: 25%
+      margin: 30px auto
+  .team
+    &__title,
+    &__text
+      text-align: center
+
+  .team-leader-photo
+    width: 200px
+    height: 270px
+
+@media (max-width: 650px)
+  .team-leader-photo
+    width: 150px
+    height: 220px
+    background-position: 50% 20%
+    background-size: 110%
+
+  .team-leader__title 
+    margin: 0
+    font-size: 24px
+
+  .team-leader-links .team-leader__link
+    padding-right: 10px
+  .team-workers
+    flex-wrap: wrap
+    row-gap: 20px
+    .team-worker__box,
+    .team-worker__pic
+      height: 120px
+      width: 120px
+    .team-worker__text
+      font-size: 14px 
+
+@media (max-width: 500px)
+  .team-leader-links .team-leader__link
+    display: none
+
+  .team-leader-photo
+    width: 100px
+    height: 170px
+
+  .team-leader__title 
+    font-size: 20px

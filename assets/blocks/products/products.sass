@@ -1,21 +1,17 @@
 .products
-  margin-top: 160px
+  margin-top: 100px
   &-wrap
     display: grid
     justify-items: center
     &::after
-      display: block
-      content: ""
-      border: 1px solid #ff2d2d
-      width: 20%
-      margin-top: 30px
+      @extend %red-underline
   &__title
     @extend %h2-title
     text-align: center
   &__text
     font-family: OpenSans,sans-serif
     font-size: 16px
-    color: #585858
+    color: #707070
     margin-top: 20px
     line-height: 1.5em
     text-align: center
@@ -105,6 +101,7 @@
       &__item,
       &__link
         font-size: 16px
+        
 @media (max-width: 1000px)
   
 @media (max-width: 768px)
